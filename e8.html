@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #8</title>
+</head>
+<body>
+    <script>
+        //Exercise #8
+//Create a class Student with properties name and grades. Implement methods to add grades and compute the average. 
+//How does the this keyword behave differently in arrow functions compared to regular functions?
+
+class Student {
+    constructor(name) {
+      this.name = name;
+      this.grades = [];
+    }
+  
+    addGrade(grade) {
+      this.grades.push(grade);
+    }
+  
+    calculateAverage() {
+      if (this.grades.length === 0) {
+        return 0; 
+      } 
+  
+      const sum = this.grades.reduce((acc, grade) => acc + grade, 0);
+      return sum / this.grades.length;
+    }
+  }
+  
+  // Example usage:
+  const student1 = new Student("Kevin");
+  student1.addGrade(85);
+  student1.addGrade(92);
+  student1.addGrade(78);
+  
+  console.log(`${student1.name}'s average grade is ${student1.calculateAverage()}`);
+  
+
+    </script>
+</body>
+</html>

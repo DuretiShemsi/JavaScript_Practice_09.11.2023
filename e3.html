@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #3</title>
+</head>
+<body>
+   <script>
+    //Exercise #3
+//Objective: Understand the role of constructor methods within classes.
+//Modify your Person class. The constructor should now accept and initialize name and age properties.
+//Create two different Person instances with unique names and ages.
+
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet() {
+        console.log(`Hello, my name is  ${this.name}, and I am  ${this.age} years old.`);
+    }
+}
+
+const person1 = new Person('Jacob', 21);
+const person2 = new Person('Linda', 26);
+
+person1.greet(); 
+person2.greet(); 
+
+
+   </script>
+</body>
+</html>

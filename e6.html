@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>//Exercise #6</title>
+</head>
+<body>
+    <script>
+        //Exercise #6
+        class Person {
+            #id;
+          
+            constructor() {
+              
+              this.#id = Math.floor(Math.random() * 1000);
+            }
+          
+            get number() {
+              
+              return this.#id;
+            }
+          }
+          
+          
+          const person = new Person();
+          
+          // Access the ID directly (will not work because it's private)
+         // console.log(person.#id); // This will result in an error
+          
+          // Access the ID via the getter method (correct way to access the private field)
+          console.log(person.number);
+    </script>
+</body>
+</html>

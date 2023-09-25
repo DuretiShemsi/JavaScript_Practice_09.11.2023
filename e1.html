@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #1</title>
+</head>
+<body>
+    <script>
+        //Exercise #1
+    // Objective: Understand the "this" keyword in different contexts.
+//Create three functions: one global, one as an object method, and an arrow function inside an object.
+//Print the value of this inside each function.
+//Discuss or note down the differences you observe in the value of this across the three scenarios.
+
+//global method
+
+function global() {
+    console.log("This in global function :", this);
+  }
+  
+  global();
+  
+  //In a global function, when we call global(), the this keyword refers to the global object
+
+  //object method
+
+  const myCar = {
+    brand: "Nissan",
+    drive: function() {
+      console.log(`I am driving a ${this.brand} car.`);
+    },
+  };
+  
+  myCar.drive(); 
+
+  //In an object method, such as myCar.drive(), the this keyword refers to the object that the method is called on (in this case, myCar)
+  
+
+  //Arrow Function
+
+
+    </script>
+</body>
+</html>

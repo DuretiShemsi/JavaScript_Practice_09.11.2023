@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #5</title>
+</head>
+<body>
+    <script>
+        //Exercise #5
+        //Objective: Implement getters and setters for class properties.
+//Within your Person class, add getters and setters for the age property.
+//Ensure with the setter that age can't be set to a negative value.
+//Instantiate a Person object, try setting a negative age, and observe the results.
+
+    class Person {
+        #age; // Private field for age
+    
+        constructor(name, age) {
+            this.name = name;
+            this.#age = age;
+        }
+    
+        // Getter for age
+        get age() {
+            return this.#age;
+        }
+    
+        // Setter for age
+        set age(value) {
+            if (value < 0) {
+                console.log("Age can't be negative!");
+            } else {
+                this.#age = value;
+            }
+        }
+    }
+    
+    const person = new Person("John", 25);
+    console.log(person.age);
+    
+    person.age = -5;
+    console.log(person.age);
+    
+
+
+    </script>
+</body>
+</html>

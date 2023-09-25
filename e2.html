@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #2</title>
+</head>
+<body>
+    <script>
+        //Exercise #2
+//Objective: Delve into Object-Oriented Programming by creating and interacting with classes.
+//Define a Person class with properties name and age.
+//Add a method greet() to this class which outputs a greeting.
+//Instantiate two different Person objects and invoke their greet methods.
+
+class Person {
+    constructor (name, age)  {
+        this.name = name;
+        this.age = age;
+
+    }
+
+    greet(){
+        console.log(`Hello ${this.name}!`); 
+    }
+}
+
+const person1 = new Person ('Jacob');
+person1.greet();
+
+    </script>
+</body>
+</html>

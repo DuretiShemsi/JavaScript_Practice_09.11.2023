@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>//Exercise #7</title>
+</head>
+<body>
+    <script>
+        //Exercise #7
+        //As a challenge, design a Library class. This class should be able to store book objects.
+        //For book objects, you should have a Book class. This class should have private fields for ISBN and public fields like title, author, and yearPublished.
+        //The Library should feature methods that allow a user to add a book, remove a book, and list all books.
+        //Implement this system and run a series of operations, such as adding a book, listing books, etc.
+
+class Library {
+    #ISBN;
+
+    constructor(ISBN, title, author, yearPublished){
+        this.#ISBN = ISBN;
+        this.title = title;
+        this.author = author;
+        this.yearPublished = yearPublished;
+    }
+}
+    class Library {
+        constructor() {
+            this.books = [];
+        }
+    
+        addBook(book) {
+            this.books.push(book);
+        }
+    
+        removeBook(ISBN) {
+            this.books = this.books.filter(book => book.ISBN !== ISBN);
+        }
+    
+        listBooks() {
+            for (const book of this.books) {
+                console.log("Title:", book.title);
+                console.log("Author:", book.author);
+                console.log("Year Published:", book.yearPublished);
+                console.log("ISBN:", book.ISBN);
+                console.log("\n");
+            }
+        }
+    }
+    
+const library = new Library();
+
+const book1 = new Book("978-1594134593", "The Help", "Kathryn Stockett", 2009);
+const book2 = new Book("978-0553593716", "The Hunger Games", "Suzanne Collins", 2008);
+const book3 = new Book("978-0735219090", "Where the Crawdads Sing", "Delia Owens", 2018);
+
+library.addBook(book1);
+library.addBook(book2);
+library.addBook(book3);
+
+
+console.log("Listing all books in the library:");
+library.listBooks();
+
+console.log("\nRemoving 'The Help' from the library:");
+library.removeBook("978-1594134593");
+
+console.log("\nListing all books in the library after removal:");
+library.listBooks();
+
+
+
+    </script>
+</body>
+</html>

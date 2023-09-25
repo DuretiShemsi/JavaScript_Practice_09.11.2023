@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #4</title>
+</head>
+<body>
+    <script>
+        //Exercise #4
+//Objective: Familiarize with static methods in classes.
+//Add a static method called info() to the Person class. This method should return a statement like, "This is a Person class".
+//Try accessing this method both from the class itself and from an instance of the class. Document the outcomes.
+
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    static info() {
+        return 'This is a Person class';
+    }
+}
+// Accessing the static method from the class itself
+console.log(Person.info()); // Output: "This is a Person class"
+
+// Creating an instance of the Person class
+const person = new Person('Sara', 30);
+
+// Accessing the static method from an instance of the class
+console.log(person.constructor.info()); // Output: "This is a Person class"
+
+
+    </script>
+</body>
+</html>
